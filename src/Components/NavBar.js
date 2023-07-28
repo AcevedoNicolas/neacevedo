@@ -28,23 +28,18 @@ function NavBar() {
             <div className="collapse navbar-collapse bg-black " id="navbarSupportedContent">
                 <ul className="navbar-nav ms-auto" >
                     <li className="nav-item active">
-                        <a className="nav-link" href="#">Home <span className="sr-only"></span></a>
+                        <a className="nav-link" href="#">Inicio <span className="sr-only"></span></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">about me</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">services</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">how work</a>
+                        <a className="nav-link" href="#">Acerca de</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#">Portfolio</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Contact</a>
+                        <a className="nav-link" href="#">Contactame</a>
                     </li>
+                
                 </ul>
 
             </div>
