@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@300;400;700&display=swap');
+
+:root{
+  --primary-white: #fff;
+  --primary-orange:#f9ab00;
+  --primary-dark:rgba(255,255,255,0);
+}
+
+body{
+  font-family: "Roboto Condensed" sans-serif;
+}
 .logo {
-  height: 50px;
+  height: 100px;
   /* Ajusta la altura del logo según tus preferencias */
   width: auto;
   /* La anchura se ajustará automáticamente para mantener la proporción */
@@ -7,4 +18,46 @@
 
 
 
+}
+
+
+
+nav a.nav-link{
+  font-size: .9rem ;
+  
+  letter-spacing: 0.4rem;
+  cursor: pointer;
+  
+}
+
+nav ul li {
+  text-transform: uppercase;
+}
+.navbar-nav > li > a {
+  margin-right: 1px;
+  margin-left: 0.1px;
+  color: var(--primary-white) !important;
+  border-top:0.1875rem solid var(--primary-dark);
+  border-bottom:0.1875rem solid var(--primary-dark);
+}
+
+.navbar-brand{
+max-width: 17.25rem;
+padding: 0 !important;
+height: 6rem !important;
+}
+
+
+.navbar-toggler{
+  border: none !important;
+}
+
+.navbar-toggler:focus{
+  box-shadow: none !important;
+}
+
+.navbar-nav > li > a.active, .navbar-nav > li > a:focus{
+
+  border-top: 0.1875rem solid var(--primary-orange);
+  border-bottom: 0.1875rem solid var(--primary-orange);
 }
