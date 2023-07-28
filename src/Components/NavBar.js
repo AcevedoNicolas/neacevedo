@@ -10,7 +10,7 @@ function NavBar() {
     return (
         
         
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark h-50" id='nLogo'>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-black h-50" id='nLogo'>
            
             <a className="navbar-brand" href="#"><img className="logo" src={Logo} alt=' logo...' /></a>
 
@@ -25,7 +25,7 @@ function NavBar() {
 
             </button>
             
-            <div className="collapse navbar-collapse bg-dark " id="navbarSupportedContent">
+            <div className="collapse navbar-collapse bg-black " id="navbarSupportedContent">
                 <ul className="navbar-nav ms-auto" >
                     <li className="nav-item active">
                         <a className="nav-link" href="#">Home <span className="sr-only"></span></a>
