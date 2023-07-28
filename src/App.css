@@ -1,7 +1,10 @@
 .logo {
-  margin: 0 auto;
+  height: 50px;
+  /* Ajusta la altura del logo según tus preferencias */
+  width: auto;
+  /* La anchura se ajustará automáticamente para mantener la proporción */
+  margin-left: auto;
 
-  width: 15rem;
-  height: 4rem;
+
 
 }
