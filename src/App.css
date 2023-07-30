@@ -63,6 +63,10 @@ height: 6rem !important;
 
 
 /*******************************HEADER--FOTO***************************************/
+
+/* Header.css */
+
+/* Estilos generales */
 .header-wraper {
   position: relative;
   background-color: black;
@@ -73,15 +77,15 @@ height: 6rem !important;
   flex-direction: row; /* Cambiamos a fila horizontal */
   justify-content: space-between; /* Espacio entre la foto y la presentación */
   align-items: center;
-  padding: 0 20%; /* Añadimos un espacio horizontal para separar los elementos */
+  padding: 0 20px; /* Añadimos un espacio horizontal para separar los elementos */
 }
 
 .mi-foto {
-  width: 500px;
-  height: 500px;
+  width: 250px; /* Reducimos el tamaño de la foto en pantallas más pequeñas */
+  height: 250px;
   border-radius: 50%;
   overflow: hidden;
-  margin-top: -200px;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,46 +101,86 @@ height: 6rem !important;
   transition: all 0.3s ease;
   cursor: pointer;
 }
+
 .mi-foto:hover {
   /* Efecto de acercamiento al pasar el mouse */
-  transform: scale(1.01); /* Puedes ajustar el valor según el nivel de acercamiento deseado */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.9); /* Bordado blanco al pasar el mouse */
+  transform: scale(1.05); /* Puedes ajustar el valor según el nivel de acercamiento deseado */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.9); /* Borde blanco al pasar el mouse */
 }
 
 .mi-foto:hover img {
   /* Efecto de acercamiento al pasar el mouse */
-  transform: scale(1.01); /* Puedes ajustar el valor según el nivel de acercamiento deseado */
+  transform: scale(1.05); /* Puedes ajustar el valor según el nivel de acercamiento deseado */
 }
+
+/* Estilos para el texto a la izquierda */
 .texto-izquierdo {
-  /* Estilos para el texto a la izquierda */
   color: var(--primary-white) !important;
   text-align: left;
-  padding: 30px; 
-  border: 4px solid transparent; 
-  border-left-color:var(--primary-orange) !important;
-  border-bottom-color: var(--primary-orange) !important; 
-  border-radius: 0 0 0 1px; 
-  margin-top: -220px;
-  
-
+  padding: 20px; /* Reducimos el padding en pantallas más pequeñas */
+  border: 4px solid transparent;
+  border-left-color: var(--primary-orange) !important;
+  border-bottom-color: var(--primary-orange) !important;
+  border-radius: 0 0 0 10px; /* Ajustamos el borde redondeado en pantallas más pequeñas */
+  margin-top: -220px; /* Ajustamos el margen superior en pantallas más pequeñas */
 }
 
-
 .texto-izquierdo h1 {
-  font-size: 100px;
-  
-
+  font-size: 50px; /* Reducimos el tamaño del título en pantallas más pequeñas */
 }
 
 .texto-izquierdo h2 {
-  font-size: 30px;
-
+  font-size: 20px; /* Reducimos el tamaño del subtítulo en pantallas más pequeñas */
 }
 
 .texto-izquierdo p {
-  font-size: 30px;
+  font-size: 20px; /* Reducimos el tamaño del párrafo en pantallas más pequeñas */
 }
 
+/* Media Queries para diseño responsive */
+@media (max-width: 768px) {
+  .header-wraper {
+    flex-direction: column; /* Cambiamos a columna en pantallas más pequeñas */
+    padding: 20px; /* Reducimos el espacio horizontal en pantallas más pequeñas */
+  }
+
+  .mi-foto {
+    width: 180px; /* Reducimos el tamaño de la foto en pantallas más pequeñas */
+    height: 180px;
+    margin-top: 0;
+    margin-bottom: 20px; 
+  }
+
+  .texto-izquierdo {
+    text-align: left; /* Centramos el texto en pantallas más pequeñas */
+    margin-bottom: 160px; /* Ajustamos el margen superior en pantallas más pequeñas */
+    border-radius: 0; /* Eliminamos el borde redondeado en pantallas más pequeñas */
+  }
+
+  .texto-izquierdo h1 {
+    font-size: 30px; /* Reducimos el tamaño del título en pantallas más pequeñas */
+  }
+
+  .texto-izquierdo h2,
+  .texto-izquierdo p {
+    font-size: 20px; /* Reducimos el tamaño del subtítulo y el párrafo en pantallas más pequeñas */
+  }
+  
+  /* Cambiamos el orden de los elementos */
+  .header-wraper {
+    flex-direction: column-reverse;
+  }
+  
+  /* Ajustamos el tamaño del botón */
+  .btn.btn-danger {
+    font-size: 13px !important; /* Puedes ajustar el tamaño según tus necesidades */
+    padding: 10px 20px !important; /* Puedes ajustar el padding para que el botón se vea bien en pantallas pequeñas */
+  }
+  .header-wraper {
+    flex-direction: column-reverse;
+  }
+
+}
 
 
   
