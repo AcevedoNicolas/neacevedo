@@ -61,12 +61,16 @@ height: 6rem !important;
   box-shadow: none !important;
 }
 
-.navbar-nav > li > a.active, .navbar-nav > li > a:focus{
-
-  border-top: 0.1875rem solid var(--primary-orange);
-  border-bottom: 0.1875rem solid var(--primary-orange);
+.navbar-nav > li > a.active, .navbar-nav > li > a:focus {
+  border-top: 0.1875rem solid transparent; /* Establecemos el borde superior transparente por defecto */
+  border-bottom: 0.1875rem solid transparent; 
+  transition: border-color 0.3s; 
 }
 
+.navbar-nav > li > a:hover {
+  border-top: 0.1875rem solid var(--primary-orange); 
+  border-bottom: 0.1875rem solid var(--primary-orange); 
+}
 
 /*******************************HEADER--FOTO***************************************/
 
@@ -230,23 +234,89 @@ height: 6rem !important;
   
   
   /*********************************ABOUT ME *****************************************/
- /* Estilos CSS */
 
 .about {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Alinea los elementos al principio del contenedor */
+  justify-content: flex-start; 
   align-items: center;
   height: 100vh;
-  /*color: var(--primary-white) !important;*/
+ 
+}
+.sobreMI{
+  color: var(--primary-orange);
+  font-size: 40px;
+
+}
+/******************************DETALLE EDUCACION Y CURSO***************************/
+
+.edu_curso{
+  color: var(--primary-white);
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 10vh;
+  text-align: center;
 }
 
+.edu_curso h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Ajustes para la ubicación de las columnas */
+.columns-container {
+  display: flex;
+}
+.column svg,
+.column p svg
+{
+  width: 2rem; /* Ajusta el tamaño del ícono */
+  height: 4rem;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.column {
+  width: 60vh;
+  flex: 1;
+  padding: 20px;
+  color: var(--primary-white);
+  margin-right: 5vh;
+}
+
+.column h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 1px;
+}
+
+.column p {
+  
+  font-size: 16px;
+  margin: 1px;
+  border-bottom: 1px solid var(--primary-white);
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+
+/*************************************************************************************/
 .miHisto {
   font-size: 80px;
   font-weight: bold;
   color: var(--primary-white);
   text-align: center;
-  margin-bottom: vh; /* Ajusta el margen inferior para separar el h1 del contenido */
+  margin-bottom: 3vh; /* Ajusta el margen inferior para separar el h1 del contenido */
   margin-top: 10vh;
 }
 
@@ -269,57 +339,81 @@ height: 6rem !important;
   height: 4rem;
   margin-left: 10px; /* Ajusta el margen izquierdo para separar el ícono del texto */
 }
+.edu_curso  svg{
+  width: 3.5rem; /* Ajusta el tamaño del ícono */
+  height: 3.5rem;
+  margin-left: 10px; /* Ajusta el margen izquierdo para separar el ícono del texto */
 
-.experiencia-box {
-  position: relative;
-  background-color: transparent;
-  padding: 100px;
-  border: 4px solid white;
-  border-radius: 0px;
-  margin-top: 10vh;
 }
 
 .experiencia-container {
-  display: flex;
-  justify-content: space-between;
-  /* Centra horizontalmente las experiencias y las separa equitativamente */
+  display: flex; /* Utilizamos flexbox para colocar los elementos en línea */
+}
+
+.experiencia-box {
+  flex: 1; 
+  margin: 10px; 
+  margin-top: 50px;
 }
 
 .experiencia-section {
-  width: 30%; /* Ajusta el ancho para dividir en tres secciones */
-  background-color: black;
+  height: 17vh;
+  width: 42vh;
+  background-color: transparent;
   color: white;
-  padding: 20px;
-  text-align: center;
- 
-
+  padding: 10px;
+  text-align:justify;
+  border: 4px solid white;
+  cursor: pointer;
 }
 .experiencia-section h2 {
   border-bottom: 2px solid white;
   padding-bottom: 10px;
 }
 
-.experiencia-box::before {
-  content: ""; /* Añadimos contenido vacío */
-  position: absolute; /* Posición absoluta */
-  top: 0;
-  bottom: 0;
-  width: 2px; /* Ancho de la línea */
-  background-color: white; /* Color de la línea */
-  left: calc(33.33% - 1px); /* Posición para la primera línea */
+.experiencia-section:hover {
+  color: var(--primary-orange); /* Cambia el color del texto al pasar por encima */
+  border-color: var(--primary-orange); /* Cambia el color de los bordes al pasar por encima */
 }
 
-.experiencia-box::after {
-  content: ""; /* Añadimos contenido vacío */
-  position: absolute; /* Posición absoluta */
-  top: 0;
-  bottom: 0;
-  width: 2px; /* Ancho de la línea */
-  background-color: white; /* Color de la línea */
-  left: calc(66.66% - 1px); /* Posición para la segunda línea */
+.sobre:hover svg,
+.edu_curso:hover svg,
+.experiencia-section:hover svg {
+  stroke: var(--primary-orange); /* Cambia el color del ícono al pasar por encima */
 }
-.experiencia-section:last-child {
-  margin-right: 0; /* Elimina el margen derecho para la última sección */
+/* Estilos para pantallas más pequeñas */
 
+
+/* Estilos para pantallas aún más pequeñas */
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 1620px) {
+  .about {
+    height: auto; /* Cambiamos la altura para que se ajuste al contenido */
+  }
+
+  .sobreMI {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .experiencia-container {
+    display: block; /* Cambiamos a display block para que los cuadros aparezcan uno debajo del otro */
+    text-align: center; /* Centramos los cuadros */
+  }
+
+  .experiencia-box {
+    margin: 10px auto; /* Ajustamos los márgenes para centrar los cuadros */
+    width: 90%; /* Establecemos un ancho máximo para que los cuadros se ajusten gradualmente */
+    max-width: 400px; /* Establecemos un ancho máximo para evitar que los cuadros se vuelvan demasiado anchos */
+  }
+
+  .about .experiencia-section {
+    width: 100%; /* Ajustamos el ancho para que los cuadros ocupen todo el espacio disponible */
+    height: auto; /* Cambiamos la altura para que se ajuste al contenido */
+    margin-top: 10px; /* Añadimos un margen superior para separar los cuadros */
+  }
+
+  .edu_curso {
+    font-size: 45px;
+  }
 }
-
