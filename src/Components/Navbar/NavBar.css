@@ -1,0 +1,62 @@
+.logo {
+    height: 100px;
+    /* Ajusta la altura del logo según tus preferencias */
+    width: auto;
+    /* La anchura se ajustará automáticamente para mantener la proporción */
+    margin-left: auto;
+  
+  }
+
+
+  .container {
+    position: relative !important;
+    z-index: 1 !important;
+    
+    
+  }
+  nav a.nav-link{
+    font-size: .9rem ;
+    
+    letter-spacing: 0.4rem;
+    cursor: pointer;
+    
+  }
+  
+  nav ul li {
+    text-transform: uppercase;
+  }
+  .navbar-nav > li > a {
+    margin-right: 20px;
+    margin-left: 0.1px;
+    color: var(--primary-white) !important;
+    border-top:0.1875rem solid var(--primary-dark);
+    border-bottom:0.1875rem solid var(--primary-dark);
+  }
+  
+  .navbar-brand{
+  max-width: 17.25rem;
+  padding: 0 !important;
+  height: 6rem !important;
+  }
+  
+  
+  .navbar-toggler{
+    border: none !important;
+ 
+  }
+  
+  .navbar-toggler:focus{
+    box-shadow: none !important;
+  
+  }
+  
+  .navbar-nav > li > a.active, .navbar-nav > li > a:focus {
+    border-top: 0.1875rem solid transparent; /* Establecemos el borde superior transparente por defecto */
+    border-bottom: 0.1875rem solid transparent; 
+    transition: border-color 0.3s; 
+  }
+  
+  .navbar-nav > li > a:hover {
+    border-top: 0.1875rem solid var(--primary-orange); 
+    border-bottom: 0.1875rem solid var(--primary-orange); 
+  }

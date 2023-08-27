@@ -1,0 +1,163 @@
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    height: 100vh;
+  
+  }
+
+.sobreMI{
+    color: var(--primary-orange);
+    font-size: 3vh;
+  
+  }
+
+  .edu_curso{
+    color: var(--primary-white);
+    font-size: 4vh;
+    font-weight: bold;
+    margin-top: 10vh;
+    text-align: center;
+  }
+  
+  .edu_curso h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Ajustes para la ubicación de las columnas */
+  .columns-container {
+    display: flex;
+   
+  }
+  .column svg,
+  .column p svg
+  {
+    width: 2vh; /* Ajusta el tamaño del ícono */
+    height: 2vh;
+    margin-left: 1vh;
+    margin-right: 10px;
+
+    
+  }
+  .column p{
+    width: 60vh;
+  }
+
+
+  
+  .column {
+    width: 60vh;
+    flex: 1;
+    padding: 20px;
+    color: var(--primary-white);
+    margin-right: 5vh;
+    margin-top: 5vh;
+    
+  }
+  
+  .column h3 {
+    font-size: 2.1vh;
+    font-weight: bold;
+    margin-bottom: .9vh;
+    margin-top: 1.1vh;
+    width: 60vh;
+  }
+  
+  .column p {
+    
+    font-size: 1.8vh;
+    margin: 1px;
+    border-bottom: 1px solid var(--primary-white);
+    
+  }
+  
+  .column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .column li {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  
+  /*************************************************************************************/
+  .miHisto {
+    font-size: 4vh;
+    font-weight: bold;
+    color: var(--primary-white);
+    text-align: center;
+    margin-bottom: 3vh; /* Ajusta el margen inferior para separar el h1 del contenido */
+    margin-top: 13vh;
+  }
+  
+  .sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Elimina la altura para que el div ocupe el espacio necesario */
+  }
+  
+  .sobre-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Ajusta el margen superior para separar el contenido del h1 */
+  }
+  
+  .miHisto svg {
+    width: 4vh; /* Ajusta el tamaño del ícono */
+    height: 4vh;
+    margin-left: 1vh; /* Ajusta el margen izquierdo para separar el ícono del texto */
+  }
+  .edu_curso  svg{
+    width: 5vh; /* Ajusta el tamaño del ícono */
+    height: 5vh;
+    margin-left: 10px; /* Ajusta el margen izquierdo para separar el ícono del texto */
+  
+  }
+  
+  .experiencia-container {
+    display: flex; /* Utilizamos flexbox para colocar los elementos en línea */
+  }
+  
+  .experiencia-box {
+    flex: 1; 
+    margin: 10px; 
+    margin-top: 50px;
+  }
+  
+  .experiencia-section {
+    height: 20vh;
+    width: 43vh;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    text-align:justify;
+    border: 4px solid white;
+    cursor: pointer;
+  }
+  .experiencia-section h2 {
+    border-bottom: 2px solid white;
+    padding-bottom: 1vh;
+    font-size: 2vh;
+  }
+  .experiencia-section h5 {
+    font-size: 2vh;
+    padding: 1vh;
+  }
+  .experiencia-section:hover {
+    color: var(--primary-orange); /* Cambia el color del texto al pasar por encima */
+    border-color: var(--primary-orange); /* Cambia el color de los bordes al pasar por encima */
+  }
+  
+  .sobre:hover svg,
+  .edu_curso:hover svg,
+  .experiencia-section:hover svg {
+    stroke: var(--primary-orange); /* Cambia el color del ícono al pasar por encima */
+  }

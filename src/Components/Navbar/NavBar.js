@@ -1,11 +1,20 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link } from  'react-router-dom'
-import Logo from '../Img/NA.png';
-
+import Logo from '../../Img/NA.png';
+import '../Navbar/NavBar.css';
+import logon from '../../Img/NA NARANJA.png';
 function NavBar() {
     const [collapsed, setCollapsed] = useState(true);
     const [navbarColor, setNavbarColor] = useState("transparent");
+    const [LogoColor,setLogoColor] = useState(false);
+
+    const handleLogoMouseEnter = () => {
+        setLogoColor(true);
+      };
+    
+      const handleLogoMouseLeave = () => {
+        setLogoColor(false);
+      };
 
     useEffect(() => {
         const changeNavbarColor = () => {
@@ -23,10 +32,17 @@ function NavBar() {
     }, []);
 
     return (
-        <nav className={`navbar navbar-expand-lg navbar-dark bg-${navbarColor} h-20 fixed-top`} id='nLogo'>
-            <div className="container">
+        <div className="nava">
+        <nav className={`navbar navbar-expand-lg navbar-dark bg-${navbarColor}  fixed-top`} id='nLogo'>
+            <div className="container" >
              <a href="/">
-        <img className="logo" src={Logo} alt='logo...' />
+             <img
+            className={`logo ${LogoColor ? "logo-orange" : ""}`}
+            src={LogoColor ? logon : Logo}
+            alt="logo..."
+            onMouseEnter={handleLogoMouseEnter}
+            onMouseLeave={handleLogoMouseLeave}
+          />
       </a>
 
             <button
@@ -94,6 +110,7 @@ function NavBar() {
             </div>
             </div>
         </nav>
+        </div>
     );
 }
 
