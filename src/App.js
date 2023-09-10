@@ -9,15 +9,17 @@ import  Contact  from './Components/Contact/Contact';
 import About from './Components/About/About';
 import Header from './Components/Header/Header';
 
+
 function App() {
   return (
     <div className="App">
-    
+       
         <NavBar />
         <Header />
         <About />
         <Portfolio  />  
         <Contact />
+       
      
       
     </div>

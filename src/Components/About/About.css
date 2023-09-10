@@ -11,6 +11,7 @@
 .sobreMI{
     color: var(--primary-orange);
     font-size: 3vh;
+    text-align: center;
   
   }
 
@@ -45,6 +46,18 @@
   .column p{
     width: 60vh;
   }
+  .column h3 svg,
+  .column p svg {
+    color: var(--primary-white);
+    transition: fill 0.3s;
+  }
+  
+  .column h3:hover svg,
+  .column p:hover svg 
+   {
+    color: var(--primary-orange);
+  }
+
 
 
   
@@ -160,4 +173,35 @@
   .edu_curso:hover svg,
   .experiencia-section:hover svg {
     stroke: var(--primary-orange); /* Cambia el color del ícono al pasar por encima */
+  }
+  @media (max-width: 767px) {
+    .about{
+      height:auto;
+      max-width: 100%; 
+    }
+    .sobreMI{
+      margin-bottom: 20px;
+    }
+    .experiencia-container {
+      flex-direction: column;
+      max-width: 100%; 
+      
+     
+    }
+    .experiencia-box {
+      margin: 8px; 
+    }
+    .columns-container {
+      flex-direction: column;
+      margin: 20px; /* Agrega espacio entre las columnas */
+    }
+
+    .edu_curso{
+      margin-top: 2px;
+    }
+    .column{
+      margin-top: 2px;
+    }
+
+    
   }

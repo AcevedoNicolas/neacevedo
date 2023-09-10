@@ -18,11 +18,15 @@ function NavBar() {
 
     useEffect(() => {
         const changeNavbarColor = () => {
-            if (window.scrollY > 300) {
+            if (window.scrollY > 400) {
                 setNavbarColor("dark");
-            } else {
+            } 
+            else
+            
+             {
                 setNavbarColor("black");
             }
+            
         };
 
         window.addEventListener("scroll", changeNavbarColor);
